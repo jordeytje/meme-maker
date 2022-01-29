@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+
+  .options {
+    width: 25%;
+    background: greenyellow;
+  }
+
+  .playground {
+    width: 75%;
+    background: #f5f5f5;
+  }
+}
+
+.wysiwyg {
+  background: #f5f5f5;
+
+  .tools {
+    background: #f5f5f5;
+
+    .tool-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+
+      .option {
+        position: relative;
+        display: flex;
+        margin-right: 15px;
+
+        i {
+          margin-right: 5px;
+          padding: 5px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        &:after {
+          content: '|';
+          font-weight: bold;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -10px;
+          display: flex;
+          align-items: center;
+        }
+
+        &.option-font {
+          input {
+            width: 45px;
+          }
+
+          span {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+
+    .option {
+      position: relative;
+      display: flex;
+      margin-right: 15px;
+
+      i {
+        margin-right: 5px;
+        padding: 5px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &:after {
+        content: '|';
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -10px;
+        display: flex;
+        align-items: center;
+      }
+
+      &.option-font {
+        input {
+          width: 45px;
+        }
+
+        span {
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  .text {
+    input {
+      width: calc(100% - 20px);
+      height: 30px;
+      border: none;
+      padding: 10px;
+      outline: none;
+      font-size: 16px;
+    }
+  }
+}
